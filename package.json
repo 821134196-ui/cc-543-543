@@ -1,0 +1,14 @@
+{
+  "name": "leak-negotiation-ledger",
+  "version": "1.0.0",
+  "private": true,
+  "description": "上下楼渗漏勘查、证据版本与协商修复台账（零依赖）",
+  "scripts": {
+    "start": "node --no-warnings src/start.js",
+    "reset": "node --no-warnings src/start.js --reset",
+    "test": "node --no-warnings --test test/*.test.js"
+  },
+  "engines": {
+    "node": ">=22.5"
+  }
+}

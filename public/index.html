@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>上下楼渗漏协商台账</title>
+<link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+<header class="topbar">
+  <div class="brand">
+    <span class="brand-mark"></span>
+    <div>
+      <h1>渗漏协商台账</h1>
+      <p>关阀排查 · 证据版本 · 协商签署 · 修复复验</p>
+    </div>
+  </div>
+  <div class="identity">
+    <label for="partySelect">当前身份（模拟登录）</label>
+    <select id="partySelect"></select>
+    <span id="partyRole" class="role-tag"></span>
+  </div>
+</header>
+
+<main class="layout">
+  <aside class="case-rail">
+    <div class="rail-head">
+      <h2>案件</h2>
+      <button id="refreshBtn" class="btn ghost small" title="刷新">刷新</button>
+    </div>
+    <ul id="caseList" class="case-list"></ul>
+    <p class="rail-note">仅列出与当前身份相关的案件；他户案件不可见。</p>
+  </aside>
+
+  <section id="detail" class="detail">
+    <div class="empty-hint" id="emptyHint">请选择左侧案件</div>
+  </section>
+</main>
+
+<div id="toast" class="toast"></div>
+<script src="/js/api.js"></script>
+<script src="/js/app.js"></script>
+</body>
+</html>
