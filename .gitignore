@@ -13,3 +13,5 @@ build/
 轨迹/
 录屏/
 视频/
+# LeakFlow 生成数据（SQLite 与现场照片可由 run.sh / seed 重建）
+leakflow/data/

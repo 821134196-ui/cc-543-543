@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>LeakFlow 渗漏协同处置</title>
+<link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+<header class="topbar">
+  <div class="topbar-inner">
+    <div class="brand">
+      <svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M12 2.5c3.8 5.1 6.2 8.8 6.2 12a6.2 6.2 0 1 1-12.4 0C5.8 11.3 8.2 7.6 12 2.5z"
+              fill="none" stroke="#3e7cb1" stroke-width="1.6"/>
+      </svg>
+      <span>LeakFlow · 物业渗漏协同处置</span>
+    </div>
+    <div class="actor-switch">
+      <label for="actorSel">视角</label>
+      <select id="actorSel"></select>
+      <span class="chain-dot" id="chainDot" title="事件哈希链校验"></span>
+      <span class="chain-txt" id="chainTxt"></span>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+  <section class="case-head" id="caseHead"></section>
+
+  <nav class="tabs" id="tabs">
+    <button data-tab="floors" class="active">楼层示意</button>
+    <button data-tab="timeline">证据时间线</button>
+    <button data-tab="appts">入户预约</button>
+    <button data-tab="tests">试水记录</button>
+    <button data-tab="plans">协商方案</button>
+    <button data-tab="repairs">修复复验</button>
+    <button data-tab="chain">事件链</button>
+  </nav>
+
+  <div id="toast" class="toast" hidden></div>
+
+  <section class="panel" id="panel-floors"></section>
+  <section class="panel" id="panel-timeline" hidden></section>
+  <section class="panel" id="panel-appts" hidden></section>
+  <section class="panel" id="panel-tests" hidden></section>
+  <section class="panel" id="panel-plans" hidden></section>
+  <section class="panel" id="panel-repairs" hidden></section>
+  <section class="panel" id="panel-chain" hidden></section>
+</main>
+
+<!-- 照片标注弹层 -->
+<div class="lightbox" id="lightbox" hidden>
+  <div class="lightbox-box">
+    <div class="lightbox-head">
+      <span id="lbTitle"></span>
+      <button class="link-btn" id="lbClose">关闭</button>
+    </div>
+    <div class="lightbox-stage" id="lbStage"></div>
+    <div class="lightbox-foot" id="lbFoot"></div>
+  </div>
+</div>
+
+<script src="/static/app.js"></script>
+</body>
+</html>
